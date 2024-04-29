@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import CraftItems from "../Components/CraftItems";
 import Slider from "../Components/Slider";
+import Gallery from "../Components/Gallery";
 
 
 const Home = () => {
@@ -25,6 +26,10 @@ const Home = () => {
                 ></CraftItems>)
             }
            </div>
+           <section className="text-2xl font-poppins font-bold text-center my-10">
+            <h2>Our Gallery</h2>
+           </section>
+           <Gallery></Gallery>
 
         </div>
     );

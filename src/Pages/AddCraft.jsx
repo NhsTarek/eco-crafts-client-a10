@@ -134,7 +134,7 @@ const AddCraft = () => {
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="userEmail">
                             User Email
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="userEmail" type="email" placeholder="User Email" />
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" type="email" placeholder="User Email" />
                     </div>
                     {/* User Name */}
                     <div className="mb-4">

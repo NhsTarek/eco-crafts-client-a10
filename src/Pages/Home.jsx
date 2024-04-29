@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import CraftItems from "../Components/CraftItems";
 import Slider from "../Components/Slider";
 import Gallery from "../Components/Gallery";
+import ClientsReview from "../Components/ClientsReview";
 
 
 const Home = () => {
@@ -26,10 +27,15 @@ const Home = () => {
                 ></CraftItems>)
             }
            </div>
-           <section className="text-2xl font-poppins font-bold text-center my-10">
+           <section className="text-3xl font-poppins font-bold text-center my-10">
             <h2>Our Gallery</h2>
            </section>
            <Gallery></Gallery>
+           <section className="text-center font-poppins my-10 ">
+            <h2 className="text-2xl font-extrabold mb-5">Recent Reviews</h2>
+            <p className="text-xl">Here are our valuable client reviews. Their lovely reviews always motivate us to provide decent services.</p>
+           </section>
+           <ClientsReview></ClientsReview>
 
         </div>
     );

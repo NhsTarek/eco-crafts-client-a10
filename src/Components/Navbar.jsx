@@ -9,6 +9,7 @@ import { AuthContext } from "../providers/AuthProviders";
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
+    
 
     const [theme, setTheme] = useState('light');
 

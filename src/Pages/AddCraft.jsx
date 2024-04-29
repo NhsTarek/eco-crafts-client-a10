@@ -1,13 +1,18 @@
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
+import useAuth from "../hooks/UseAuth";
 
 
 
 
 const AddCraft = () => {
 
+    const {user} = useAuth() || {};
+    // console.log(user);
+
     const handleAddCraft = event =>{
         event.preventDefault()
+        
         const form = event.target;
         const itemName = form.itemName.value;
         const image = form.image.value;
@@ -19,9 +24,10 @@ const AddCraft = () => {
         const stockStatus = form.stockStatus.value;
         const rating = form.rating.value;
         const userName = form.userName.value;
-        const userEmail = form.userEmail.value;
+        const email = user.email;
+    console.log(email);
 
-        const newCraft = {itemName, image, subcategoryName, shortDescription, price, rating, userName, userEmail, stockStatus, customization, processingTime};
+        const newCraft = {itemName, image, subcategoryName, shortDescription, price, rating, userName, email, stockStatus, customization, processingTime};
         console.log(newCraft);
 
 
@@ -36,9 +42,11 @@ const AddCraft = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
-                toast.success('Craft item added successfully')
+            if(data?.insertedId){
+                toast.success('Craft item added successfully');
+                return;
             }
+            
         })
     }
     return (

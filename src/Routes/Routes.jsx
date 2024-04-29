@@ -7,6 +7,8 @@ import MyCraftList from "../Pages/MyCraftList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoutes from "./PrivateRoutes";
+
 
 const router = createBrowserRouter([
     {
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/addCraftItem',
-            element: <AddCraft></AddCraft>,
+            element: <PrivateRoutes><AddCraft></AddCraft></PrivateRoutes>,
         },
         {
             path: '/myCraftList',

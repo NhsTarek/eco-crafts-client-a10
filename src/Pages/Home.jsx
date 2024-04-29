@@ -5,6 +5,7 @@ import CraftItems from "../Components/CraftItems";
 
 const Home = () => {
     const crafts = useLoaderData();
+    
     return (
         <div className="m-5">
              <Helmet>

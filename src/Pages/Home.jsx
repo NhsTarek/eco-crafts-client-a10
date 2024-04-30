@@ -31,9 +31,9 @@ const Home = () => {
                 }
             </div>
             <Bounce>
-            <section className="text-3xl font-poppins font-bold text-center my-10">
-                <h2>Our Gallery</h2>
-            </section>
+                <section className="text-3xl font-poppins font-bold text-center my-10">
+                    <h2>Our Gallery</h2>
+                </section>
             </Bounce>
             <Gallery></Gallery>
             <section className="text-center font-poppins my-10 ">

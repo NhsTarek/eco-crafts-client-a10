@@ -10,6 +10,9 @@ const AllCrafts = () => {
 
     return (
         <div className="overflow-x-auto">
+          <Helmet>
+          <title>EcoCrafts Hub |   All Arts & Craft items</title>
+          </Helmet>
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>

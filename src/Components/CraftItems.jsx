@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 
 const CraftItems = ({craft}) => {
-   const {_id,itemName, image,  shortDescription, stockStatus, } = craft;
+   const {_id, itemName, image,  shortDescription, stockStatus, } = craft;
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="card p-5 card-side bg-base-100 shadow-xl">
         <figure><img src={image} alt="Movie"/></figure>
         <div className="card-body">
           <h2 className="card-title font-poppins font-semibold">{itemName}</h2>

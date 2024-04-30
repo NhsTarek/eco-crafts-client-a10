@@ -20,17 +20,17 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/craft')
+            loader: () => fetch('https://ecocrafts-hub-server.vercel.app/craft')
         },
         {
             path: '/viewDetails/:id',
             element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+            loader: ({params}) => fetch(`https://ecocrafts-hub-server.vercel.app/${params.id}`)
         },
         {
             path: '/allArts&Crafts',
             element: <AllCrafts></AllCrafts>,
-            loader: () => fetch('http://localhost:5000/craft'),
+            loader: () => fetch('https://ecocrafts-hub-server.vercel.app/craft'),
         },
         {
             path: '/addCraftItem',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         {
             path: '/updatepage/:id',
             element: <PrivateRoutes><UpdatePage></UpdatePage></PrivateRoutes>,
-            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+            loader: ({params}) => fetch(`https://ecocrafts-hub-server.vercel.app/${params.id}`)
         },
         
       ]

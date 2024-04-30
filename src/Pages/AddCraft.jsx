@@ -32,7 +32,7 @@ const AddCraft = () => {
 
 
         // send data to ther server
-        fetch('http://localhost:5000/craft', {
+        fetch('https://ecocrafts-hub-server.vercel.app/', {
             method: 'POST',
             headers:{
                 'content-type':'application/json'

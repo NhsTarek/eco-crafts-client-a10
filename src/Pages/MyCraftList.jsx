@@ -20,7 +20,7 @@ const MyCraftList = () => {
   console.log(user);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myList/${user?.email}`)
+    fetch(`https://ecocrafts-hub-server.vercel.app/myList/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

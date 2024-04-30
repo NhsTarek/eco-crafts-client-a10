@@ -3,15 +3,28 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
+
 // Your web app's Firebase configuration
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAsg81hhnaeV_HJLFiZB8bkzlIcJ7u9Tpg",
-  authDomain: "ecocrafts-hub.firebaseapp.com",
-  projectId: "ecocrafts-hub",
-  storageBucket: "ecocrafts-hub.appspot.com",
-  messagingSenderId: "1062407797466",
-  appId: "1:1062407797466:web:fbe8f6cfb3bc6830fc83e3"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAsg81hhnaeV_HJLFiZB8bkzlIcJ7u9Tpg",
+//   authDomain: "ecocrafts-hub.firebaseapp.com",
+//   projectId: "ecocrafts-hub",
+//   storageBucket: "ecocrafts-hub.appspot.com",
+//   messagingSenderId: "1062407797466",
+//   appId: "1:1062407797466:web:fbe8f6cfb3bc6830fc83e3"
+// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

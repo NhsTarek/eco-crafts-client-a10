@@ -9,7 +9,7 @@ const Craftlist = ({ i, control, setControl }) => {
    
 
     const handleDelete = _id => {
-        console.log(_id);
+        // console.log(_id);
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -22,7 +22,7 @@ const Craftlist = ({ i, control, setControl }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/craft/${_id}`, {
+                fetch(`https://ecocrafts-hub-server.vercel.app/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

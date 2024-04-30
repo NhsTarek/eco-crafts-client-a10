@@ -34,7 +34,7 @@ const UpdatePage = () => {
 
 
         // send data to ther server
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://ecocrafts-hub-server.vercel.app/${_id}`, {
             method: 'PUT',
             headers:{
                 'content-type':'application/json'

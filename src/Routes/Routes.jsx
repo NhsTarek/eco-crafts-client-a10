@@ -8,6 +8,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdatePage from "../Pages/UpdatePage";
+import ViewDetails from "../Pages/ViewDetails";
 
 
 const router = createBrowserRouter([
@@ -21,8 +23,14 @@ const router = createBrowserRouter([
             loader: () => fetch('http://localhost:5000/craft')
         },
         {
+            path: '/viewDetails/:id',
+            element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
+            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+        },
+        {
             path: '/allArts&Crafts',
             element: <AllCrafts></AllCrafts>,
+            loader: () => fetch('http://localhost:5000/craft'),
         },
         {
             path: '/addCraftItem',
@@ -30,7 +38,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/myCraftList',
-            element: <MyCraftList></MyCraftList>,
+            element: <PrivateRoutes><MyCraftList></MyCraftList></PrivateRoutes>,
         },
         {
             path: '/login',
@@ -43,6 +51,12 @@ const router = createBrowserRouter([
         {
             path: '/errorpage',
             element: <ErrorPage></ErrorPage>
+        },
+        
+        {
+            path: '/updatepage/:id',
+            element: <PrivateRoutes><UpdatePage></UpdatePage></PrivateRoutes>,
+            loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
         },
         
       ]

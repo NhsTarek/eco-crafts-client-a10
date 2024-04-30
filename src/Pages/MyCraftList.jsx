@@ -8,6 +8,8 @@ import Craftlist from "../Components/Craftlist";
 const MyCraftList = () => {
   const { user } = useAuth();
   const [item, setItem] = useState([])
+  const [ control , setControl] = useState(false);
+  
   console.log(user);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ const MyCraftList = () => {
       .then((data) => {
         setItem(data);
       });
-  }, [user]);
+  }, [user, control]);
 
   return (
     <div>
@@ -29,6 +31,8 @@ const MyCraftList = () => {
 
             key={i._id}
             i={i}
+            setControl={setControl}
+            control={control}
           >
 
           </Craftlist>)

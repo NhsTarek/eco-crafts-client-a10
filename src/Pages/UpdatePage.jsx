@@ -150,7 +150,7 @@ const UpdatePage = () => {
                     {/* Add Button */}
                     <div className="text-center">
 
-                        <input type="submit" value="Update" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" />
+                        <input  type="submit" value="Update" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" />
                     </div>
                 </form>
             </div>

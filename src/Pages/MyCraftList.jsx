@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import useAuth from "../hooks/UseAuth";
 import Craftlist from "../Components/Craftlist";
+import loader from "../loader.json"
+import Lottie from "lottie-react";
 
 
 const MyCraftList = () => {
   const { user } = useAuth();
   const [item, setItem] = useState([])
+  const [ isLoading, setIsLoading] = useState(false)
   const [ control , setControl] = useState(false);
   
   console.log(user);
@@ -17,8 +20,19 @@ const MyCraftList = () => {
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
+        setIsLoading(false)
       });
   }, [user, control]);
+
+  if(isLoading){
+    return (
+      <div className="flex justify-center items-center h-[80vh]">
+      <span><Lottie animationData={loader} /></span>
+     </div>
+    )
+       
+    
+  }
 
   return (
     <div>

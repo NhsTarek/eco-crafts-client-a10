@@ -12,7 +12,7 @@ const CraftItems = ({craft}) => {
           <p className="font-medium">{shortDescription}</p>
           <p className="font-medium">{stockStatus}</p>
           <div className="card-actions">
-            <Link to={`https://ecocrafts-hub.web.app/viewDetails/${_id}`}><button className="btn btn-primary">View Details</button></Link>
+            <Link to={`/craft/${_id}`}><button className="btn btn-primary">View Details</button></Link>
           </div>
         </div>
       </div>

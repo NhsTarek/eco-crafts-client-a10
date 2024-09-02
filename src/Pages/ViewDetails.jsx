@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const ViewDetails = () => {
     const craft = useLoaderData();
     const { itemName, image, subcategoryName, shortDescription, price, rating, userName,  stockStatus, customization, processingTime } = craft;
+    
     return (
         <div className="">
             <div className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">

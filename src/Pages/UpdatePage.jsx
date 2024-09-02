@@ -6,6 +6,7 @@ import useAuth from "../hooks/UseAuth";
 
 const UpdatePage = () => {
     const craft = useLoaderData()
+    console.log(craft);
 
     const { _id, itemName, image, subcategoryName, shortDescription, price, rating, userName, email, stockStatus, customization, processingTime } = craft;
 
@@ -33,8 +34,8 @@ const UpdatePage = () => {
         console.log(updatedCraft);
 
 
-        // send data to ther server
-        fetch(`https://ecocrafts-hub-server.vercel.app/${_id}`, {
+        // send data to the server
+        fetch(`https://ecocrafts-hub-server.vercel.app/craft/${_id}`, {
             method: 'PUT',
             headers:{
                 'content-type':'application/json'

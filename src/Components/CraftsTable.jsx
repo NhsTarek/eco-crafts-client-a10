@@ -11,7 +11,7 @@ const CraftsTable = ({craft, index}) => {
         <td>{price}</td> 
         <td>{rating}</td> 
         <td>{stockStatus}</td>
-        <Link to={`/viewDetails/${_id}`}><td>View Details</td></Link>
+        <Link to={`/craft/${_id}`}><td>View Details</td></Link>
       </tr>
     );
 };
